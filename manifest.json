@@ -1,0 +1,21 @@
+{
+  "name": "linkedin-promoted-posts-blocker",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "linkedin promoted-posts block",
+  "icons": {
+    "32": "icons/icon32.png",
+    "64": "icons/icon64.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.linkedin.com/*"],
+      "all_frames": true,
+      "js": ["main.js"]
+    }
+  ]
+}

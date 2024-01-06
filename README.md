@@ -1,7 +1,10 @@
-# instagram-block
+# linkedin-block
 chrome extension
 
-hide reels and suggested posts
+hide suggested posts
 
-![image](https://github.com/brandonporcel/instagram-block/assets/66080281/b9f9e202-e872-43ce-856d-167a08a493c7)
-![image](https://github.com/brandonporcel/instagram-block/assets/66080281/5cb7aa3f-dc5b-442a-82c6-030f68ab5696)
+chauu
+
+![image](https://github.com/brandonporcel/linkedin-block/assets/66080281/94ad99c4-7528-47e7-9d3b-455a58481679)
+![image](https://github.com/brandonporcel/linkedin-block/assets/66080281/00953c4f-4366-4855-be15-60850cb65af2)
+![image](https://github.com/brandonporcel/linkedin-block/assets/66080281/548f14e2-9a06-44e0-8687-6f6068b3bd1d)

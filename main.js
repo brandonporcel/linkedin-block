@@ -25,7 +25,8 @@ function hideSuggestedPosts() {
         containsText(span, "Suggested") ||
         containsText(span, "Jobs recommended for you") ||
         containsText(span, "Expert answers on") ||
-        containsText(span, "Recommended for you")
+        containsText(span, "Recommended for you") ||
+        containsText(span, "Events recommended for you")
       ) {
         const fatherElem = getParentByHierarchy(span, 6);
         hideElement(fatherElem);

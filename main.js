@@ -26,8 +26,23 @@ function hideSuggestedPosts() {
         containsText(span, "Jobs recommended for you") ||
         containsText(span, "Expert answers on") ||
         containsText(span, "Recommended for you") ||
-        containsText(span, "Events recommended for you")
+        containsText(span, "Events recommended for you") ||
+        containsText(span, "Popular course") ||
+        containsText(span, "Follow")
       ) {
+        const fatherElem = getParentByHierarchy(span, 6);
+        hideElement(fatherElem);
+      }
+    });
+  });
+}
+
+function hideFollowPosts() {
+  const headers = document.querySelectorAll(".update-components-actor");
+  headers.forEach((header) => {
+    const buttons = header.querySelectorAll("button");
+    buttons.forEach((span) => {
+      if (containsText(span, "Follow")) {
         const fatherElem = getParentByHierarchy(span, 6);
         hideElement(fatherElem);
       }
@@ -54,8 +69,22 @@ function handleScroll() {
   });
 
   hideSuggestedPosts();
+  hideFollowPosts();
   hidePromos();
 }
 
+async function hideAsideContent() {
+  const asideRight = document.querySelector("aside.scaffold-layout__aside");
+
+  if (asideRight) {
+    asideRight.style.display = "none";
+  }
+}
+
+function main() {
+  hideAsideContent();
+  handleScroll();
+}
+
 window.addEventListener("scroll", handleScroll);
-document.addEventListener("DOMContentLoaded", handleScroll);
+main();

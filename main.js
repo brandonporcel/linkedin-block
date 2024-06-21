@@ -46,7 +46,7 @@ function hideFollowPosts() {
       return;
     }
     buttons.forEach((span) => {
-      if (containsText(span, "Follow")) {
+      if (containsText(span, "Follow") || containsText(span, "Join")) {
         const fatherElem = getParentByHierarchy(span, 6);
         hideElement(fatherElem);
       }

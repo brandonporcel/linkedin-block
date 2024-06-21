@@ -13,7 +13,7 @@ function hideElement(element, displayValue = "none") {
 }
 
 function containsText(element, text) {
-  return element.innerText.includes(text);
+  return element.innerText.toLowerCase().includes(text.toLowerCase());
 }
 
 function hideSuggestedPosts() {
@@ -41,6 +41,10 @@ function hideFollowPosts() {
   const headers = document.querySelectorAll(".update-components-actor");
   headers.forEach((header) => {
     const buttons = header.querySelectorAll("button");
+    const articleHeader = getParentByHierarchy(header, 1);
+    if (containsText(articleHeader, "this")) {
+      return;
+    }
     buttons.forEach((span) => {
       if (containsText(span, "Follow")) {
         const fatherElem = getParentByHierarchy(span, 6);

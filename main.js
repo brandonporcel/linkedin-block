@@ -48,6 +48,9 @@ function hideFollowPosts() {
     buttons.forEach((span) => {
       if (containsText(span, "Follow") || containsText(span, "Join")) {
         const fatherElem = getParentByHierarchy(span, 6);
+        // citado de persona seguida
+        if ([...fatherElem.classList].includes("feed-shared-update-v2")) return;
+
         hideElement(fatherElem);
       }
     });
